@@ -20,6 +20,7 @@
     <h1>Hello Vueoolean - Todolist</h1>
 
     <div class="d-flex my-4">
+      <input type="color" class="form-control form-control-color" id="exampleColorInput" title="Scegli un colore">
       <input class="form-control" type="text" placeholder="Vorrei..." v-model="newTask" @keyup.enter="addTask()">
       <button type="button" class="btn btn-outline-primary" @click="addTask()">Aggiungi</button>
     </div>
@@ -27,7 +28,8 @@
     <ul class="list-group mt-3">
       <h2 v-if="toDoList.length===0" class="text-center">Nessun elemento presente nella lista di cose da fare...
         Aggiungine uno!</h2>
-      <li class="list-group-item bd-callout bd-callout-danger" v-for="(task, i) in toDoList">{{task}}
+      <li class="list-group-item bd-callout bd-callout-danger" v-for="(task, i) in toDoList">
+        <span>{{task}}</span>
         <button class="delete-cross" @click="deleteTask(i)">&#215;</button>
       </li>
     </ul>
