@@ -25,8 +25,8 @@
     </div>
 
     <ul class="list-group mt-3">
-      <li class="list-group-item bd-callout bd-callout-danger" v-for="task in toDoList">{{task}}
-        <button class="delete-cross">&#215;</button>
+      <li class="list-group-item bd-callout bd-callout-danger" v-for="(task, i) in toDoList">{{task}}
+        <button class="delete-cross" @click="deleteTask(i)">&#215;</button>
       </li>
     </ul>
   </div>
