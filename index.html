@@ -20,7 +20,7 @@
     <h1>Hello Vueoolean - Todolist</h1>
 
     <div class="d-flex my-4">
-      <input class="form-control" type="text" placeholder="Vorrei..." v-model="newTask">
+      <input class="form-control" type="text" placeholder="Vorrei..." v-model="newTask" @keyup.enter="addTask()">
       <button type="button" class="btn btn-outline-primary" @click="addTask()">Aggiungi</button>
     </div>
 
