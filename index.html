@@ -25,6 +25,8 @@
     </div>
 
     <ul class="list-group mt-3">
+      <h2 v-if="toDoList.length===0" class="text-center">Nessun elemento presente nella lista di cose da fare...
+        Aggiungine uno!</h2>
       <li class="list-group-item bd-callout bd-callout-danger" v-for="(task, i) in toDoList">{{task}}
         <button class="delete-cross" @click="deleteTask(i)">&#215;</button>
       </li>
