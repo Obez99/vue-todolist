@@ -1,0 +1,18 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+.form-control{
+  width: 650px;
+}
+
+.list-group{
+  width:740px;
+}
+
+.list-group-item{
+  padding: 15px;
+  position: relative;
+}
