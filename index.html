@@ -20,8 +20,8 @@
     <h1>Hello Vueoolean - Todolist</h1>
 
     <div class="d-flex my-4">
-      <input class="form-control" type="text" placeholder="Vorrei..." aria-label="default input example">
-      <button type="button" class="btn btn-outline-primary">Aggiungi</button>
+      <input class="form-control" type="text" placeholder="Vorrei..." v-model="newTask">
+      <button type="button" class="btn btn-outline-primary" @click="addTask()">Aggiungi</button>
     </div>
 
     <ul class="list-group mt-3">
