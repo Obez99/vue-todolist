@@ -19,6 +19,14 @@ const app = new Vue({
       if (task === "")
         return;
 
+      const isTaskEqual = this.toDoList.some((element) => {
+        return task.toLowerCase() === element.toLowerCase()
+      })
+
+      if (isTaskEqual)
+        return;
+
+
       this.toDoList.push(task);
 
       this.newTask = "";
