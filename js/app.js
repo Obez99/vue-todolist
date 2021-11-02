@@ -10,11 +10,13 @@ const app = new Vue({
 
   methods: {
     deleteTask: function (i) {
-      this.toDoList.splice(i, 1)
+      this.toDoList.splice(i, 1);
     },
 
     addTask: function () {
-      this.toDoList.push(this.newTask)
+      this.toDoList.push(this.newTask);
+
+      this.newTask = "";
     }
 
   }
