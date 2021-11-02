@@ -14,7 +14,12 @@ const app = new Vue({
     },
 
     addTask: function () {
-      this.toDoList.push(this.newTask);
+      const task = this.newTask.trim();
+
+      if (task === "")
+        return;
+
+      this.toDoList.push(task);
 
       this.newTask = "";
     }
